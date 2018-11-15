@@ -42,6 +42,9 @@ export default {
     },
     beforeLeave () {
       this.show = false
+    },
+    activate () {
+      this.$emit('activate')
     }
   },
   data () {

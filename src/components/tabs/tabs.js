@@ -78,6 +78,10 @@ export default {
     const tabs = this.tabs
     // Navigation 'buttons'
     const buttons = tabs.map((tab, index) => {
+      tab.$on('activate', () => {
+        this.setTab(index)
+      })
+
       return h(bTabButtonHelper, {
         key: index,
         props: {
